@@ -188,23 +188,86 @@
         </ul>\
     </section>\
 \
-    <!-- Consultation Form Section -->\
-    <section id="consultation">\
-        <h2>Request a Consultation</h2>\
-        <p>Fill out our consultation form and we\'92ll get back to you shortly.</p>\
-        <a href="https://forms.gle/PFwAvhb91FQJiJ8h8" target="_blank">\
-            <button>Open Consultation Form</button>\
-        </a>\
-    </section>\
-\
-    <!-- Chat / Questions Section -->\
-    <section id="chat">\
-        <h2>Have a Question? Chat With Us!</h2>\
-        <p>Click below to send us your questions and we\'92ll respond as soon as possible.</p>\
-        <a href="https://forms.gle/PFwAvhb91FQJiJ8h8" target="_blank">\
-            <button>Ask a Question</button>\
-        </a>\
-    </section>\
+    <!-- CONSULTATION & CHAT SECTION -->
+<section id="consultation-chat">
+    <h2>Get in Touch</h2>
+    <div class="card-container">
+        <!-- Consultation Card -->
+        <div class="card">
+            <h3>Request a Consultation</h3>
+            <p>Fill out our consultation form and we’ll guide you through the steps to prepare for your teaching journey in China.</p>
+            <a href="https://forms.gle/PFwAvhb91FQJiJ8h8" target="_blank" class="btn-card">Open Consultation Form</a>
+        </div>
+
+        <!-- Chat / Questions Card -->
+        <div class="card">
+            <h3>Have Questions?</h3>
+            <p>If you have any doubts or need more information, send us a message and we’ll respond promptly.</p>
+            <a href="https://forms.gle/PFwAvhb91FQJiJ8h8" target="_blank" class="btn-card">Ask a Question</a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* CARD SECTION STYLES */
+#consultation-chat {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #111; /* dark background */
+    color: #fff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    flex: 1 1 300px;
+    max-width: 450px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #e50914;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    display: inline-block;
+    background: #e50914;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-card:hover {
+    background: #fff;
+    color: #e50914;
+}
+</style>
 \
     <!-- Contact Section -->\
     <section id="contact">\
