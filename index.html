@@ -50,16 +50,31 @@
             color: #e50914;\
         \}\
 \
-        /* Header / Hero */\
-        header \{\
-            background: url('header.jpg') center/cover no-repeat, linear-gradient(to right, #111111, #333333);\
-            color: #ffffff;\
-            padding: 80px 20px;\
-            text-align: center;\
-        \}\
-        header img.logo \{\
-            width: 180px;\
-            margin-bottom: 20px;\
+        header {
+    background: url('header.jpg') center/cover no-repeat, linear-gradient(to right, #111111, #333333);
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+header img.logo {
+    width: 180px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* overlay for better text contrast */
+    z-index: 1;
+}
         \}\
         header h1 \{\
             margin: 0;\
@@ -161,12 +176,11 @@
         </ul>\
     </nav>\
 \
-    <!-- Header / Hero -->\
-    <header>\
-        <img src="logo.png" alt="Chinaway Logo" class="logo">\
-        <h1>Chinaway</h1>\
-        <p>Your Bridge to Teaching Opportunities in China for Moroccans</p>\
-    </header>\
+    <header>
+    <img src="logo.png" alt="Chinaway Logo" class="logo">
+    <h1>Chinaway</h1>
+    <p>Your Bridge to Teaching Opportunities in China for Moroccans</p>
+</header>
 \
     <!-- About Section -->\
     <section id="about">\
