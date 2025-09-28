@@ -68,16 +68,48 @@
 </head>\
 <body>\
 \
-    <!-- NAVIGATION -->\
-    <nav>\
-        <ul>\
-            <li><a href="#about">About</a></li>\
-            <li><a href="#services">Services</a></li>\
-            <li><a href="#consultation-chat">Consultation</a></li>\
-            <li><a href="#contact">Contact</a></li>\
-            <li><a href="#gallery">Gallery</a></li>\
-        </ul>\
-    </nav>\
+    /* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent; /* starts transparent */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background: #111; /* turns black after scroll */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 15px 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #e50914;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.5);
+}
+
 \
     <!-- HEADER -->\
     <header>\
